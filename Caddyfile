@@ -4,7 +4,4 @@
 : 80 {
     root * /usr/share/caddy
     file_server
-    reverse_proxy /api/* {
-        to http://localhost:8080
-    }
 }
