@@ -3,14 +3,14 @@
 FROM caddy:2.0.0-alpine
 
 # workdir
-workdir /usr/share/caddy
+WORKDIR /usr/share/caddy
 
 # copy all files
 
 COPY . .
 
 # expose port
-expose 80
+EXPOSE 80
 
 # run caddy
-CMD ['caddy', 'run', '--config', 'Caddyfile', '--adapter', 'caddyfile']
+CMD ["caddy", "run", "--config", "Caddyfile", "--adapter", "caddyfile"]
